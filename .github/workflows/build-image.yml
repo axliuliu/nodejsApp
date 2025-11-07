@@ -37,8 +37,9 @@ jobs:
         with:
           context: .
           push: true
+          # 修正了名称为全小写，以满足 Docker 的要求
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+            ghcr.io/axiiisliu/nodejsapp:latest
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=Websocket Server
